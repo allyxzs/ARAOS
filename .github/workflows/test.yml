@@ -1,4 +1,4 @@
-name: Dar permissão de execução aos testes
+name: execution permission for tests
         run: chmod +x t/run_tests
 
 name: Run tests
