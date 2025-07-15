@@ -1,4 +1,4 @@
-# 🧠 ARA OS — Intelligent System for Monitoring, Automation & Code Generation
+# 🧠 ARA OS — BETA version 037
 
 **ARA OS** is a cutting‑edge desktop platform written in Python that brings together:
 
