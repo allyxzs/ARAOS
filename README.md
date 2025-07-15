@@ -1,18 +1,29 @@
-## requirements
+# 🧠 ARA OS — Intelligent System for Monitoring, Automation & Code Generation
 
-the required py libraries:
+**ARA OS** is a cutting‑edge desktop platform written in Python that brings together:
 
-PyQt5
-psutil
-matplotlib
-openai
+- 📊 **Live Monitoring** of CPU, memory, disk, and network with smooth, real‑time charts.  
+- 💬 **Smart Local Chat** with a futuristic interface for quick Q&A and code snippets.  
+- 🧰 **Code Creator** — on‑the‑fly script generation and integrated terminal.  
+- ⚙️ **Architecture** — automated cleanup tasks, process management, and self‑healing routines.
 
-# interface
+---
 
-The interface is divided into four parts
-Monitoring: Show CPU, memory and disc graphics
-Code Creator: generates user-made code snippets, acting as a "vscode" within ARA.
-Architecture: automatically executes and organizes codes in real time
-Chat: desenvolving...
+## 🚀 Technologies
 
-asasd
+- Python 3.11+  
+- PyQt6  
+- Matplotlib  
+- psutil  
+- PyAutoGUI  
+- winshell  
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/allyxzs/ARAOS.git
+cd ARAOS
+pip install -r requirements.txt
+python araos.py
