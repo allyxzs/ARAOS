@@ -1,0 +1,5 @@
+PyQt6
+psutil
+pyautogui
+winshell
+matplotlib
