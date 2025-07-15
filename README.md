@@ -7,6 +7,10 @@
 - 🧰 **Code Creator** — on‑the‑fly script generation and integrated terminal.  
 - ⚙️ **Architecture** — automated cleanup tasks, process management, and self‑healing routines.
 
+## 🖼 Interface da ARA OS
+
+![Screenshot da ARA](screenshot.png)
+
 ---
 
 ## 🚀 Technologies
