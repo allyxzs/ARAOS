@@ -1,3 +1,6 @@
+name: Dar permissão de execução aos testes
+        run: chmod +x t/run_tests
+
 name: Run tests
 
 on: [push, pull_request]
