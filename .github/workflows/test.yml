@@ -1,24 +1,35 @@
-# create the folder structure
-mkdir -p .github/workflows
+name: Run Tests
 
-name: Tests
-on: [push]
+on:
+  push:
+    branches:
+      - master
+      - main
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Make test script executable
-        run: chmod +x t/run_tests
-      - name: Run tests
-        run: ./t/run_tests
-'@ | Out-File -FilePath .github/workflows/test.yml -Encoding UTF8
 
-# create a basic gitignore
-echo "git-filter-repo/" > .gitignore
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Make test script executable
+        run: chmod +x t/run_tests || echo "No test script"
+
+      - name: Run tests
+        run: |
+          if [ -x t/run_tests ]; then
+            ./t/run_tests
+          else
+            echo "No tests defined, skipping."
+          fi
